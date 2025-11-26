@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Fix Edge Search to Google",
+  "description": "Redirects Edge/Bing/MSN search pages to Google and uses Google for the new tab page.",
+  "version": "1.0.0",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://www.bing.com/*",
+    "*://cn.bing.com/*",
+    "*://www.msn.com/*",
+    "*://start.msn.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "redirect-bing-to-google",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Fix Edge Search to Google"
+  }
+}

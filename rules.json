@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://www.google.com/search?q=\\2"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://(www|cn)\\.bing\\.com/search\\?q=([^&]+).*$",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://www.google.com/"
+      }
+    },
+    "condition": {
+      "urlFilter": "www.bing.com/",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://www.google.com/"
+      }
+    },
+    "condition": {
+      "urlFilter": "cn.bing.com/",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://www.google.com/"
+      }
+    },
+    "condition": {
+      "urlFilter": "www.msn.com/",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "https://www.google.com/"
+      }
+    },
+    "condition": {
+      "urlFilter": "start.msn.com/",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  }
+]
