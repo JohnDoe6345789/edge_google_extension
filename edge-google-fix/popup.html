@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fix Edge Search to Google</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13px;
+        margin: 12px;
+        min-width: 260px;
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0 0 8px 0;
+      }
+      .status {
+        margin-bottom: 8px;
+      }
+      .status-label {
+        font-weight: 600;
+      }
+      .ok {
+        color: #0a0;
+      }
+      .bad {
+        color: #c00;
+      }
+      button {
+        margin-top: 8px;
+        padding: 4px 8px;
+        font-size: 12px;
+      }
+      .small {
+        font-size: 11px;
+        color: #555;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fix Edge Search to Google</h1>
+    <div class="status">
+      <span class="status-label">Redirect rule:</span>
+      <span id="rule-status">Checking…</span>
+    </div>
+    <div class="status">
+      <span class="status-label">Last redirect seen:</span>
+      <span id="last-redirect">Never</span>
+    </div>
+    <button id="self-check">Run self-check</button>
+    <div id="self-check-result" class="small"></div>
+    <div class="small" id="details"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
