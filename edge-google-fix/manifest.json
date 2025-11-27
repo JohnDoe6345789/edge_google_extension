@@ -1,18 +1,20 @@
 {
   "manifest_version": 3,
   "name": "Fix Edge Search to Google",
-  "version": "1.1.0",
-  "description": "Redirects Bing search queries to Google and reports status in the popup.",
+  "version": "1.3.0",
+  "description": "Redirects Bing search queries to Google with detailed diagnostics in the popup.",
   "minimum_chrome_version": "88",
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestWithHostAccess",
     "storage",
-    "webNavigation"
+    "webNavigation",
+    "tabs"
   ],
   "host_permissions": [
     "https://www.bing.com/*",
-    "https://cn.bing.com/*"
+    "https://cn.bing.com/*",
+    "https://www.google.com/*"
   ],
   "background": {
     "service_worker": "background.js"
