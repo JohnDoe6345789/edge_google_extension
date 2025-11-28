@@ -1,4 +1,7 @@
 # Edge Google Fix (MV3)
+
+Unblock-File -Path .\BingGone.ps1
+
 Redirects Bing search results to Google using declarativeNetRequest.
 
 ## Install
