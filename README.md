@@ -1,6 +1,7 @@
 # Edge Google Fix (MV3)
 
-Unblock-File -Path .\BingGone.ps1
+Start-Process powershell -Verb RunAs -ArgumentList 'Unblock-File -Path "C:\path\to\Set-EdgeGoogleOnlySearch.ps1"; powershell -ExecutionPolicy Bypass -File "BingGone.ps1"'
+
 
 Redirects Bing search results to Google using declarativeNetRequest.
 
